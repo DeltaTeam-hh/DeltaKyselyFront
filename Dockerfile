@@ -24,5 +24,5 @@ RUN chmod g+rwx /var/cache/nginx /var/run /var/log/nginx && \
 COPY --from=build /app/dist /usr/share/nginx/html/
 
 WORKDIR /usr/share/nginx/html/
-EXPOSE 5173
+EXPOSE 8080
 USER nginx:root
