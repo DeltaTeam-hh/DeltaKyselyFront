@@ -10,7 +10,7 @@ function Vastaukset() {
 
   const fetchVastaukset = async () => {
     try {
-      const response = await fetch("http://localhost:8080/vastaukset");
+      const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/vastaukset");
       const data = await response.json();
       // Ryhmittele vastaukset kysymysten mukaan
       const groupedVastaukset = groupVastauksetByKysymys(data);

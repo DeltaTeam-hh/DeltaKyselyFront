@@ -16,8 +16,8 @@ function KyselynNäyttö() {
 
   const fetchKyselyt = async () => {
     try {
-      const response = await fetch(`http://localhost:8080/kyselyt/${kyselyId}`);
-      //const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/kyselyt/1");
+      const response = await fetch(`http://backend-deltakysely-back.rahtiapp.fi/kyselyt${kyselyId}`);
+      //const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/kyselyt/1");http://localhost:8080/kyselyt
       const data = await response.json();
       setKyselyt(data);
     } catch (error) {
@@ -27,8 +27,8 @@ function KyselynNäyttö() {
 
   const tallennaVastaukset = async (vastaukset) => {
     try {
-      const response = await fetch("http://localhost:8080/vastaukset", {
-        //const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/vastaukset", {
+      const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/vastaukset", {
+        //const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/vastaukset", {http://localhost:8080/vastaukset
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -14,7 +14,7 @@ export default function Kyselyt(){
 
     const fetchKyselyt = async () => {
         try {
-            const response = await fetch("http://localhost:8080/kyselyt");
+            const response = await fetch("http://backend-deltakysely-back.rahtiapp.fi/kyselyt");
             const data = await response.json();
 
             setKyselyt(data);

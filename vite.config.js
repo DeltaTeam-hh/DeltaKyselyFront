@@ -5,7 +5,5 @@ import react from '@vitejs/plugin-react'
 export default defineConfig({
   base: '/DeltaKyselyFront/', 
   plugins: [react()],
-  build: {
-    outDir: 'dist', // This is the default output directory
-  },
+  
 })
