@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 
 function Vastaukset() {
   const [vastaukset, setVastaukset] = useState([]);
-
+  const params = useParams();
   useEffect(() => {
     fetchVastaukset();
   }, []);
@@ -14,6 +15,8 @@ function Vastaukset() {
       // Ryhmittele vastaukset kysymysten mukaan
       const groupedVastaukset = groupVastauksetByKysymys(data);
       setVastaukset(groupedVastaukset);
+      console.log("React urlin kyselyId parametri");
+      console.log(params);
     } catch (error) {
       console.error("Virhe haettaessa vastauksia:", error);
     }

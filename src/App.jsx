@@ -4,6 +4,7 @@ import { Link, Outlet, Route, Routes } from "react-router-dom";
 import Etusivu from "./components/Etusivu";
 import Kyselyt from "./components/Kyselyt";
 import KyselynNäyttö from "./components/KyselynNäyttö";
+import Vastaukset from "./components/Vastaukset";
 
 function App() {
   
@@ -13,6 +14,7 @@ function App() {
       <nav>
         <Link to={"/"}>Etusivu</Link>
         <Link to={"/kyselyt"}>Kyselyt</Link>
+        <Link to={"/vastaukset"}>Vastaukset</Link>
         
       </nav>
       <Outlet />

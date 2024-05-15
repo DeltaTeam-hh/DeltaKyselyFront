@@ -7,6 +7,7 @@ import Kyselyt from './components/Kyselyt.jsx'
 import Etusivu from './components/Etusivu.jsx'
 import Error from './components/Error.jsx'
 import KyselynNäyttö from './components/KyselynNäyttö.jsx'
+import Vastaukset from './components/Vastaukset.jsx'
 
 const router = createBrowserRouter([
   {
@@ -21,8 +22,14 @@ const router = createBrowserRouter([
     path: "kyselyt",
     element: <Kyselyt />,
   },
+  {
+    path: "vastaukset",
+    element: <Vastaukset />,
+  },
   { path: 'kysely/:kyselyId',
-    element: <KyselynNäyttö /> }
+    element: <KyselynNäyttö /> },
+    { path: 'kysely/kysymykset/:kyselyId',
+    element: <Vastaukset /> }
     ]
   }
 ]);
